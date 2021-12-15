@@ -10,7 +10,7 @@ namespace Faker
 {
     public class PluginLoader
     {
-        private static readonly string PluginPath = Path.Combine("C:\\Users\\Lenovo\\OneDrive - bsuir.by\\Рабочий стол\\Fake", "plugins");
+        private static readonly string PluginPath = Path.Combine("C:\\Users\\Lenovo\\OneDrive - bsuir.by\\Рабочий стол\\Faker_lab2-master", "plugins");
         private Dictionary<Type, IGenerator> generators;
 
         public PluginLoader(Dictionary<Type, IGenerator> gen)
