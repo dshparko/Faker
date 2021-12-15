@@ -16,11 +16,7 @@ namespace Main
    {
         public string name;
         public User owner;
-        public Dog(string name,User owner)
-        {
-            this.name = name;
-            this.owner = owner;
-        }
+       
         
     }
 

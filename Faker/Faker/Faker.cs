@@ -160,19 +160,19 @@ namespace Faker
                 foreach (Type t  in counter)
                 {
                     //смотрим , чтобы у нас было два отличных класса и начинаем считать
-                    if (t.Equals(type1))
+                    if (t.Equals(typeof(User)))
                     {
                         count1++;
                     }
 
-                    if (!t.Equals(type1))
+                    if (!t.Equals(typeof(Dog)))
                     {
                         count2++;
                     }
                     //когда мы достигли нужной вложенности
-                    if (count1 == 2 && count2 == 2) { break; }
+                    if (count1 == 3 && count2 == 3) { break; }
                 }
-                if (count1 == 2 && count2 == 2)
+                if (count1 == 3 && count2 == 3)
                 {
                     //выходим
                     instance = default;
