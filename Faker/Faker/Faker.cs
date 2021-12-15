@@ -140,7 +140,11 @@ namespace Faker
 
             return true;
         }
-
+//создаю дополнительный лист для хранения всех классов 
+        List<Type> counter = new List<Type>();
+        //ввожу два счетчика для собаки и человека
+        public int count1 = 0;
+        public int count2 = 0;
 
         private bool TryGenerateCls(Type type, out object instance)
         {
@@ -150,12 +154,38 @@ namespace Faker
                 return false;
 
             if (circularReferencesEncounter.Contains(type))
-            {
-                instance = default;
-                return true;
+            {  //берем текущий тип
+                Type type1 = type;
+
+                foreach (Type t  in counter)
+                {
+                    //смотрим , чтобы у нас было два отличных класса и начинаем считать
+                    if (t.Equals(type1))
+                    {
+                        count1++;
+                    }
+
+                    if (!t.Equals(type1))
+                    {
+                        count2++;
+                    }
+                    //когда мы достигли нужной вложенности
+                    if (count1 == 2 && count2 == 2) { break; }
+                }
+                if (count1 == 2 && count2 == 2)
+                {
+                    //выходим
+                    instance = default;
+
+                    return true;
+                }
+                //не достигли, значит зануляем и сначала
+                count1 = 0;
+                count2 = 0;
             }
 
             circularReferencesEncounter.Add(type);
+           counter.Add(type);
             if (TryConstruct(type, out instance))
             {
                 GenerateFillProps(instance, type);
@@ -211,7 +241,8 @@ namespace Faker
             for (int i = 0; i < ctns.Length; i++)
             {
                   
-                    if (ctn == null || ctns[i].GetParameters().Length > ctn.GetParameters().Length)
+                    if (
+                        ctn == null || ctns[i].GetParameters().Length > ctn.GetParameters().Length)
                     {
               
                         ctn = ctns[i];
