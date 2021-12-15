@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "1a6684ce-fe59-4f69-b85c-a85a96489700": {
+      "ProjectGuid": "1a6684ce-fe59-4f69-b85c-a85a96489700",
+      "DisplayName": "SByteGeneratorPlugin",
+      "ColorIndex": 0
+    },
+    "f4b22b8d-568b-406d-b094-fbd36c4a7624": {
+      "ProjectGuid": "f4b22b8d-568b-406d-b094-fbd36c4a7624",
+      "DisplayName": "Faker",
+      "ColorIndex": 1
+    },
+    "e722e2ba-f94f-42a8-9c7b-18663e404a58": {
+      "ProjectGuid": "e722e2ba-f94f-42a8-9c7b-18663e404a58",
+      "DisplayName": "TestProject2",
+      "ColorIndex": 2
+    },
+    "9ee6427c-18c3-489d-b0bc-2b8b39fe0ec6": {
+      "ProjectGuid": "9ee6427c-18c3-489d-b0bc-2b8b39fe0ec6",
+      "DisplayName": "TestProject1",
+      "ColorIndex": 3
+    },
+    "646301a9-e868-4028-81ab-39aab1ac201d": {
+      "ProjectGuid": "646301a9-e868-4028-81ab-39aab1ac201d",
+      "DisplayName": "UshortGeneratorPlugin",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}
