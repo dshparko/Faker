@@ -31,11 +31,5 @@ namespace Main
         {
             this.address = address;
         }
-        public Profile(string address,string hello)
-        {
-        
-            this.address = address;
-            throw new Exception();
-        }
     }
 }

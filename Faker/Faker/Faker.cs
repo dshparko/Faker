@@ -211,8 +211,7 @@ namespace Faker
             for (int i = 0; i < ctns.Length; i++)
             {
                   
-                    if (
-                        ctn == null || ctns[i].GetParameters().Length > ctn.GetParameters().Length)
+                    if (ctn == null || ctns[i].GetParameters().Length > ctn.GetParameters().Length)
                     {
               
                         ctn = ctns[i];
